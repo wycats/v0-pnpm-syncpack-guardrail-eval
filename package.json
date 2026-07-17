@@ -1,0 +1,12 @@
+{
+  "name": "pnpm-syncpack-public-replay",
+  "private": true,
+  "packageManager": "pnpm@11.0.0",
+  "scripts": {
+    "syncpack": "syncpack list-mismatches"
+  },
+  "devDependencies": {
+    "syncpack": "13.0.4"
+  }
+}
+
