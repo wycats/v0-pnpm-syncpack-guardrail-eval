@@ -15,20 +15,20 @@ importers:
   packages/billing:
     dependencies:
       '@flags-sdk/vercel':
-        specifier: 1.3.0
-        version: 1.3.0(flags@4.2.0)
+        specifier: 1.4.5
+        version: 1.4.5(flags@4.2.0)
       '@vercel/flags-core':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.7.0
+        version: 1.7.0
 
   packages/web:
     dependencies:
       '@flags-sdk/vercel':
-        specifier: 1.3.0
-        version: 1.3.0(flags@4.2.0)
+        specifier: 1.4.5
+        version: 1.4.5(flags@4.2.0)
       '@vercel/flags-core':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.7.0
+        version: 1.7.0
 
 packages:
 
@@ -44,8 +44,8 @@ packages:
     resolution: {integrity: sha512-Sd8LcWpZk/SWEeKGE8LT6gMm5MGfX/wm+GPnh1eBEtCpya3vYqn37wYknwAHw92ONoyyREl1hJwxV/Qx2DWNOg==}
     engines: {node: '>=16'}
 
-  '@flags-sdk/vercel@1.3.0':
-    resolution: {integrity: sha512-IGwC8ye94+CnOYDxIdic1f2wZLbJQ67zXacD3J1/UWErcPdjtfp44RG23Qb9WujJ2VJbB8bzLdZ6R89nALtDeg==}
+  '@flags-sdk/vercel@1.4.5':
+    resolution: {integrity: sha512-ZLdFXQISmcDpAUpjpruYTUIR3a0gMpBo9crRRWG08RA/C6v0OVSP3IV4AhkrfLAbNULnBZ769w+lDwnopT9aag==}
     peerDependencies:
       flags: '*'
 
@@ -75,8 +75,8 @@ packages:
     resolution: {integrity: sha512-kQF8LGie/Hbdq9/psJxLE7owRTcqMQMhgybU04gCeR7cbQAr5t8OrjefDNColJv1QSSucFt4pLwRiARVmlOnug==}
     engines: {node: '>= 18'}
 
-  '@vercel/flags-core@1.4.0':
-    resolution: {integrity: sha512-VeWaNAMZoBmOC5B0POjYXkuP+Llt9MtMDg0DFJObBRLKQ/zTtc9lY4hVVcOIx1JjJmO3JKMZDv43WtX/1jDbmg==}
+  '@vercel/flags-core@1.7.0':
+    resolution: {integrity: sha512-lQTNIL/9hWQvrGAOydGQEAKhcvVkif3FlZbX14BnIF4G9D5h/BIR9myssmw0j+QrqHN3rbh+c0WVHapw1QYy9g==}
     peerDependencies:
       '@openfeature/server-sdk': 1.18.0
       next: '*'
@@ -97,6 +97,10 @@ packages:
         optional: true
       ws:
         optional: true
+
+  '@vercel/oidc@3.5.0':
+    resolution: {integrity: sha512-jo7GgeJx2YMkjg9A28pFM5p88n5SnSHvDeNlf9898bRWiG9jPxwedj/gn/2XTw4UOTyQ50uHlrTGSlf/XU5tgw==}
+    engines: {node: '>= 20'}
 
   '@vercel/oidc@3.8.0':
     resolution: {integrity: sha512-r00laGW6Pv778RoR6M2NxX91ycSj+PBwVo+fOb9Bif+F0IyUKt25zrvBzfEzQpeAzbqOgPZyQibEWDdDFApd+A==}
@@ -529,9 +533,9 @@ snapshots:
 
   '@edge-runtime/cookies@5.0.2': {}
 
-  '@flags-sdk/vercel@1.3.0(flags@4.2.0)':
+  '@flags-sdk/vercel@1.4.5(flags@4.2.0)':
     dependencies:
-      '@vercel/flags-core': 1.4.0
+      '@vercel/flags-core': 1.7.0
       flags: 4.2.0
     transitivePeerDependencies:
       - '@aws-sdk/credential-provider-web-identity'
@@ -564,9 +568,10 @@ snapshots:
     dependencies:
       execa: 5.1.1
 
-  '@vercel/flags-core@1.4.0':
+  '@vercel/flags-core@1.7.0':
     dependencies:
       '@vercel/functions': 3.7.5
+      '@vercel/oidc': 3.5.0
       jose: 5.2.1
       js-xxhash: 4.0.0
     transitivePeerDependencies:
@@ -576,6 +581,8 @@ snapshots:
   '@vercel/functions@3.7.5':
     dependencies:
       '@vercel/oidc': 3.8.0
+
+  '@vercel/oidc@3.5.0': {}
 
   '@vercel/oidc@3.8.0':
     dependencies:
